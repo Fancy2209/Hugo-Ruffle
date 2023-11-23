@@ -12,5 +12,12 @@ params:
   ruffle_unpkg_installation: '<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>'
   ruffle_javascript_installation: '<script src="path/to/ruffle/ruffle.js"></script>'
 
+outputFormats:
+  HTML:
+    mediaType: "text/html"
 
+feeds:
+  - name: feed
+    path: "feed.xml"
+    
 disablePathToLower: true

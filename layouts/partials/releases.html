@@ -1,0 +1,32 @@
+<table class="table table-responsive-lg table-dark downloads">
+    <thead>
+        <tr>
+            <th>Version</th>
+            {{/* With the current code, the releases sent to this table are either all prereleases or all not prereleases */}}
+            {{ with first .Releases }}
+                {{ if not .Prerelease }}
+                    <th>Date</th>
+                {{ end }}
+            {{ end }}
+            <th>Desktop</th>
+            <th>Browser Extension</th>
+            <th>Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range first .Limit .Releases }}
+            <tr>
+                <td>
+                    {{ .Name }}
+                    {{ if .Prerelease }}
+                        <code class="ml-1">preview</code>
+                    {{ end }}
+                </td>
+                {{ if not .Prerelease }}
+                    <td>{{ .PublishedAt.Format "2006-01-02" }}</td>
+                {{ end }}
+                {{ partial "release-assets.html" .Assets }}
+            </tr>
+        {{ end }}
+    </tbody>
+</table>

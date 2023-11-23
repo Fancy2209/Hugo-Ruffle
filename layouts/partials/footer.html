@@ -397,7 +397,7 @@ document.getElementById("btn").onclick = (evt) => {
       {{ partial "social.html" }}
     </li>
     <li class="description">
-      <p>{{- site.description | escape -}}</p>
+      <p>{{- site.description | htmlEscape -}}</p>
     </li>
     </div>
   </ul>

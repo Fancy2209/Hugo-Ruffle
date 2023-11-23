@@ -1,0 +1,64 @@
+<td>
+    <ul class="row">
+        {{ $linux := index (where .Params.assets "name" "contains" "-linux") 0 }}
+        {{ if $linux }}
+            <li><a href="{{ $linux.browser_download_url }}" target="_blank">Linux</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Linux</li>
+        {{ end }}
+
+        {{ $macos := index (where .Params.assets "name" "contains" "-macos") 0 }}
+        {{ if $macos }}
+            <li><a href="{{ $macos.browser_download_url }}" target="_blank">Mac OS</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Mac OS</li>
+        {{ end }}
+
+        {{ $windows32 := index (where .Params.assets "name" "contains" "-windows-x86_32") 0 }}
+        {{ if $windows32 }}
+            <li><a href="{{ $windows32.browser_download_url }}" target="_blank">Windows (32-bit)</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Windows (32-bit)</li>
+        {{ end }}
+
+        {{ $windows64 := index (where .Params.assets "name" "contains" "-windows-x86_64") 0 }}
+        {{ if $windows64 }}
+            <li><a href="{{ $windows64.browser_download_url }}" target="_blank">Windows (64-bit)</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Windows (64-bit)</li>
+        {{ end }}
+    </ul>
+</td>
+<td>
+    <ul class="row">
+        {{ $unsigned_firefox := index (where .Params.assets "name" "contains" "-firefox-unsigned") 0 }}
+        {{ if $unsigned_firefox }}
+            <li><a href="{{ $unsigned_firefox.browser_download_url }}" target="_blank">Firefox</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Firefox</li>
+        {{ end }}
+
+        {{ $webkit := index (where .Params.assets "name" "contains" "-extension.") 0 }}
+        {{ if $webkit }}
+            <li><a href="{{ $webkit.browser_download_url }}" target="_blank">Chrome / Edge</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Chrome / Edge</li>
+        {{ end }}
+
+        {{ if $macos }}
+            <li><a href="{{ $macos.browser_download_url }}" target="_blank">Safari</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Safari</li>
+        {{ end }}
+    </ul>
+</td>
+<td>
+    <ul class="row">
+        {{ $selfhosted := index (where .Params.assets "name" "contains" "-selfhosted") 0 }}
+        {{ if $selfhosted }}
+            <li><a href="{{ $selfhosted.browser_download_url }}" target="_blank">Self Hosted</a></li>
+        {{ else }}
+            <li style="text-decoration: line-through">Self Hosted</li>
+        {{ end }}
+    </ul>
+</td>
