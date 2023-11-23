@@ -1,0 +1,4 @@
+baseURL: https://ruffle.rs
+disablePathToLower: true
+languageCode: en-us
+title: Ruffle
