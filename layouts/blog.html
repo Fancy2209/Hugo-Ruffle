@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="section content primary blog">
+    {{ with .Title }}
+      <h1 class="page-heading">{{ .Title }}</h1>
+    {{ end }}
+
+    {{ .Content }}
+
+    {{ with .Site.RegularPages }}
+      {{ if gt (len .) 0 }}
+
+       {{ range . }}
+        <article class="blog-post">
+          <header>
+            <h2>
+              <a class="post-link" href="{{ .Permalink }}">
+                {{ .Title | htmlEscape }}
+              </a>
+            </h2>
+            <p class="post-meta">
+              <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" itemprop="datePublished">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+              {{ with .Params.author }}
+              <i aria-hidden="true">•</i>
+               <span itemprop="author" itemscope itemtype="http://schema.org/Person"><
+                span class="p-author h-card" itemprop="name">{{ .Params.author }}
+              </span>
+            </span>
+              {{ end }}
+            </p>
+          </header>
+          {{ with .Summary}}
+          <section class="blog-post-content">
+            {{ .Summary }}
+          </section>
+          {{ end }}
+        </article>
+        {{ end }}
+
+        {{ end }}
+        {{ end }}
+
+  </section>
+</div>

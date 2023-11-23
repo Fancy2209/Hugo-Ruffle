@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="{{ .Lang | default $.Site.Language.Lang | default "en" }}">
+
+{{ partial "head.html" }}
+
+<body>
+
+  {{ partial "header.html" -}}
+
+  <main class="page-content" aria-label="Content">
+      {{ .Content }}
+  </main>
+
+  {{ partial "footer.html" }}
+  <script>
+    $(document).ready(function () {
+    var $nav = $('.navbar');
+    // fade in .navbar
+    $(function () {
+      $(window).on('scroll load', function () {
+        // set distance user needs to scroll before we start fadeIn
+        if ($(this).scrollTop() > window.innerHeight / 8) {
+          $nav.addClass("active");
+        } else {
+          $nav.removeClass("active");
+        }
+      });
+    });
+  });
+  </script>
+
+</body>
+
+</html>

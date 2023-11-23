@@ -1,4 +1,16 @@
 baseURL: https://ruffle.rs
-disablePathToLower: true
-languageCode: en-us
 title: Ruffle
+languageCode: en-us
+
+params:
+  description: "Ruffle is a Flash Player emulator written in Rust. Ruffle targets both desktop and the web using WebAssembly."
+  image: "/assets/logo.svg"
+  github_username: ruffle-rs
+  github_url: "https://github.com/ruffle-rs/ruffle"
+  repository: ruffle-rs/ruffle
+  show_excerpts: true
+  ruffle_unpkg_installation: '<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>'
+  ruffle_javascript_installation: '<script src="path/to/ruffle/ruffle.js"></script>'
+
+
+disablePathToLower: true

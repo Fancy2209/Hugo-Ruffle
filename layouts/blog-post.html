@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<section class="section content primary blog">
+  <article class="blog-post blog-post-full" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header>
+      <h2 class="post-title p-name" itemprop="name headline">{{ .Title | htmlEscape  }}</h2>
+      <p class="post-meta">
+        <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" itemprop="datePublished">
+          {{ .Date.Format "Jan 2, 2006" }}
+        </time>
+        {{with .Params.author}}
+          <i aria-hidden="true">•</i> 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ .Params.author }}</span>
+          </span>
+          {{ end }}
+        </p>
+    </header>
+
+    <section class="blog-post-content e-content" itemprop="articleBody">
+      {{ .Content }}
+    </div>
+
+      {{ with .Site.Params.disqus.shortname }}
+        {{ partial "disqus_comments.html" . }}
+      {{ end }}
+
+    <a class="u-url" href="{{ .Permalink }}" hidden></a>
+  </article>
+</section>

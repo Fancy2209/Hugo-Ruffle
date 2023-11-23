@@ -26,7 +26,7 @@ Thanks to a massive code refactor by [@CUB3D](https://github.com/CUB3D/), dozens
 - [@Aaron1011](https://github.com/Aaron1011/) is working on **Stage3D support**! Thanks to his work, the gorgeous interstellar strategy game Solarmax 2 is now fully playable in Ruffle on the desktop player! Check out the video below.
 
 <video muted autoplay controls>
-    <source src="/assets/2023-03-12-progress-report/ruffle_solarmax2.mp4" type="video/mp4">
+    <source src="/assets/assets/2023-03-12-progress-report/ruffle_solarmax2.mp4" type="video/mp4">
 </video>
 
 Many of the fan-favorite **Flipline games are now playable**! Check them out:
@@ -36,7 +36,7 @@ Many of the fan-favorite **Flipline games are now playable**! Check them out:
 - [Papa's Bakeria](https://www.flipline.com/games/papasbakeria/index.html) (requires the Ruffle Chrome extension)
 
 <video muted autoplay controls>
-    <source src="/assets/2023-03-12-progress-report/ruffle_burgeria.mp4" type="video/mp4">
+    <source src="/assets/assets/2023-03-12-progress-report/ruffle_burgeria.mp4" type="video/mp4">
 </video>
 
 Here are just a few more of the many ActionScript 3 games that are playable today in Ruffle!
@@ -52,7 +52,7 @@ Here are just a few more of the many ActionScript 3 games that are playable toda
 - The **context menu** finally works on iOS! It is activated by a long-press on the screen. To stop this behavior if needed, simply tap the "Hide this menu" option.
 
 <video muted autoplay controls>
-    <source src="/assets/2023-03-12-progress-report/Ruffle_Kongregate_Pizzeria_iPhone.mov" type="video/mp4">
+    <source src="/assets/assets/2023-03-12-progress-report/Ruffle_Kongregate_Pizzeria_iPhone.mov" type="video/mp4">
 </video>
 
 **We have even more improvements coming very soon!**
